@@ -170,10 +170,7 @@ extension CRRefreshComponent {
     
     fileprivate func removeObserver() {
         if let scrollView = superview as? UIScrollView, isObservingScrollView {
-            scrollView.removeObserver(self, forKeyPath: 
-                                      
-                                      
-                                      .offsetKeyPath, context: &CRRefreshComponent.context)
+            scrollView.removeObserver(self, forKeyPath: CRRefreshComponent.offsetKeyPath, context: &CRRefreshComponent.context)     
             scrollView.removeObserver(self, forKeyPath: CRRefreshComponent.contentSizeKeyPath, context: &CRRefreshComponent.context)
             isObservingScrollView = false
         }
