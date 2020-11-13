@@ -166,7 +166,7 @@ extension CRRefreshComponent {
     fileprivate static var context            = "CRRefreshContext"
     fileprivate static let offsetKeyPath      = "contentOffset"
     fileprivate static let contentSizeKeyPath = "contentSize"
-    public static let animationDuration       = 0
+    public static let animationDuration: Double       = 0
     
     fileprivate func removeObserver() {
         if let scrollView = superview as? UIScrollView, isObservingScrollView {
